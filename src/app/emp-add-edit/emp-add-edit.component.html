@@ -1,0 +1,24 @@
+<div mat-dialog-title>
+    <h1>Serveur</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Le nom de serveur </mat-label>
+            <input matInput type="text" placeholder="Le nom de serveur" formControlName="nomServeur">
+          </mat-form-field> 
+
+          <mat-form-field appearance="outline">
+            <mat-label>Adresse IP</mat-label>
+            <input matInput type="text" placeholder="Adresse IP" formControlName="adresseIP">
+          </mat-form-field> 
+
+    </div>
+</div>
+
+<div mat-dialog-actions class="action">
+    <button mat-raised-button >Annuler</button>
+    <button mat-raised-button color="primary" type="submit">Enregistrer</button>
+</div>
+</form>
